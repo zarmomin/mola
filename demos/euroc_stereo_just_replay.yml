@@ -17,6 +17,6 @@ modules:
         decimation: 1
         win_pos: 510 0 500 200 # [x,y,width,height]
     params:
-      base_dir: ${EUROC_BASE_DIR}
-      sequence: vicon_room1/V1_01_easy/
+      base_dir: /home/nico/datasets/euroc/
+      sequence: machine_hall/MH_01_easy/
       time_warp_scale: 1.0
