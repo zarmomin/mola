@@ -42,6 +42,9 @@ if (NOT GTSAM_FOUND)
   )
 endif()
 
+message(STATUS "GTSAM_DIR: $GTSAM_DIR")
+message(STATUS "LD_LIBRARY_PATH: $LD_LIBRARY_PATH")
+
 # Process subdirectories:
 option(MOLA_ENABLE_UNIT_TESTS "Build unit tests" ON)
 if(MOLA_ENABLE_UNIT_TESTS)
