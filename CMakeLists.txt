@@ -23,7 +23,7 @@ include(CMakeDetermineCXXCompiler)
 
 # Allow finding cmake packages that we are just configuring now:
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
-list(APPEND CMAKE_PREFIX_PATH /home/nico/mola/mrpt/build)
+
 # Common CMake scripts:
 add_subdirectory(modules/mola-common)
 
