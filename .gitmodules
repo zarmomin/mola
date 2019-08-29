@@ -6,7 +6,7 @@
 	url = https://github.com/MOLAorg/mola-input-kitti-dataset.git
 [submodule "mola-fe-lidar"]
 	path = modules/mola-fe-lidar
-	url = https://github.com/MOLAorg/mola-fe-lidar.git
+	url = git@github.com:zarmomin/mola-fe-lidar.git
 [submodule "mola-input-euroc-dataset"]
 	path = modules/mola-input-euroc-dataset
 	url = https://github.com/MOLAorg/mola-input-euroc-dataset.git
@@ -30,7 +30,7 @@
 	url = https://github.com/MOLAorg/mola-common.git
 [submodule "mola-lidar-segmentation"]
 	path = modules/mola-lidar-segmentation
-	url = https://github.com/MOLAorg/mola-lidar-segmentation.git
+	url = git@github.com:zarmomin/mola-lidar-segmentation.git
 [submodule "mola-fe-odometry"]
 	path = modules/mola-fe-odometry
 	url = https://github.com/MOLAorg/mola-fe-odometry.git
