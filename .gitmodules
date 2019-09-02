@@ -1,6 +1,6 @@
 [submodule "mola-kernel"]
 	path = modules/mola-kernel
-	url = https://github.com/MOLAorg/mola-kernel.git
+	url = git@github.com:zarmomin/mola-kernel.git
 [submodule "mola-input-kitti-dataset"]
 	path = modules/mola-input-kitti-dataset
 	url = https://github.com/MOLAorg/mola-input-kitti-dataset.git
