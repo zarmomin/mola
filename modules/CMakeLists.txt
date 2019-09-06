@@ -5,6 +5,9 @@
 
 project(all_modules LANGUAGES CXX)
 
+# handle yaml_cpp for all modules
+include(script_yamlcpp.cmake REQUIRED)
+
 # ----------------------------------------------------
 # Process dir by dir, solving build dependencies
 #
