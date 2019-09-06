@@ -3,7 +3,7 @@
 	url = git@github.com:zarmomin/mola-kernel.git
 [submodule "mola-input-kitti-dataset"]
 	path = modules/mola-input-kitti-dataset
-	url = https://github.com/MOLAorg/mola-input-kitti-dataset.git
+	url = git@github.com:zarmomin/mola-input-kitti-dataset.git
 [submodule "mola-fe-lidar"]
 	path = modules/mola-fe-lidar
 	url = git@github.com:zarmomin/mola-fe-lidar.git
@@ -12,16 +12,16 @@
 	url = https://github.com/MOLAorg/mola-input-euroc-dataset.git
 [submodule "mola-fe-g2o-dataset"]
 	path = modules/mola-fe-g2o-dataset
-	url = https://github.com/MOLAorg/mola-fe-g2o-dataset.git
+	url = git@github.com:zarmomin/mola-fe-g2o-dataset.git
 [submodule "mola-input-rawlog"]
 	path = modules/mola-input-rawlog
-	url = https://github.com/MOLAorg/mola-input-rawlog.git
+	url = git@github.com:zarmomin/mola-input-rawlog.git
 [submodule "mola-input-hwdrivers"]
 	path = modules/mola-input-hwdrivers
-	url = https://github.com/MOLAorg/mola-input-hwdrivers.git
+	url = git@github.com:zarmomin/mola-input-hwdrivers.git
 [submodule "mola-input-kaist-dataset"]
 	path = modules/mola-input-kaist-dataset
-	url = https://github.com/MOLAorg/mola-input-kaist-dataset.git
+	url = git@github.com:zarmomin/mola-input-kaist-dataset.git
 [submodule "mp2p_icp"]
 	path = externals/mp2p_icp
 	url = https://github.com/MOLAorg/mp2p_icp.git
@@ -33,19 +33,19 @@
 	url = git@github.com:zarmomin/mola-lidar-segmentation.git
 [submodule "mola-fe-odometry"]
 	path = modules/mola-fe-odometry
-	url = https://github.com/MOLAorg/mola-fe-odometry.git
+	url = git@github.com:zarmomin/mola-fe-odometry.git
 [submodule "DBoW"]
 	path = externals/DBoW2/DBoW2
 	url = https://github.com/MOLAorg/DBoW2.git
 [submodule "mola-slam-gtsam"]
 	path = modules/mola-slam-gtsam
-	url = https://github.com/MOLAorg/mola-slam-gtsam.git
+	url = git@github.com:zarmomin/mola-slam-gtsam.git
 [submodule "mola-test-datasets"]
 	path = modules/mola-test-datasets
 	url = https://github.com/MOLAorg/mola-test-datasets.git
 [submodule "mola-input-ros1"]
 	path = modules/mola-input-ros1
-	url = https://github.com/MOLAorg/mola-input-ros1.git
+	url = git@github.com:zarmomin/mola-input-ros1.git
 [submodule "modules/mola-launcher"]
 	path = modules/mola-launcher
 	url = git@github.com:zarmomin/mola-launcher.git
