@@ -9,7 +9,7 @@
 	url = git@github.com:zarmomin/mola-fe-lidar.git
 [submodule "mola-input-euroc-dataset"]
 	path = modules/mola-input-euroc-dataset
-	url = https://github.com/MOLAorg/mola-input-euroc-dataset.git
+	url = git@github.com:zarmomin/mola-input-euroc-dataset.git
 [submodule "mola-fe-g2o-dataset"]
 	path = modules/mola-fe-g2o-dataset
 	url = git@github.com:zarmomin/mola-fe-g2o-dataset.git
