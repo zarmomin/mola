@@ -32,18 +32,20 @@ set(mola-common_DIR ${CMAKE_BINARY_DIR})
 # find here so external projects can use it
 find_package(mola-common REQUIRED)
 
-# GTSAM:
-find_package(GTSAM QUIET)
-if (NOT GTSAM_FOUND)
-  message(FATAL_ERROR
-    " *** GTSAM was not found ***\n"
-    "Please, install GTSAM or build from sources and set the cmake variable GTSAM_DIR to the build directory.\n"
-    "In Ubuntu, the easiest solution is to install gtsam from: https://launchpad.net/~joseluisblancoc/+archive/ubuntu/gtsam-develop"
-  )
+find_package(gtsam_catkin)
+if (gtsam_catkin_FOUND)
+  message("gtsam_catkin ${gtsam_catkin_LIBRARIES}")
+  set(GTSAM_LIBRARIES ${gtsam_catkin_LIBRARIES})
+  set(GTSAM_FOUND ${gtsam_catkin_FOUND})
+  set(GTSAM_INCLUDE_DIRS ${gtsam_catkin_INCLUDE_DIRS})
+  set(GTSAM_SOURCE_DIR "/home/nico/maplab_ws/build/gtsam_catkin/gtsam_src-prefix/src/gtsam_src")
+  set(GTSAM_BINARY_DIR "/home/nico/maplab_ws/build/gtsam_catkin/gtsam_src-prefix/src/gtsam_src-build")
+  message("gtsam: ${GTSAM_LIBRARIES}")
+  message("gtsam source dir: ${GTSAM_SOURCE_DIR}")
+  message("gtsam binary dir: ${GTSAM_BINARY_DIR}")
+else()
+  message(FATAL_ERROR " *** GTSAM was not found ***\n"  )
 endif()
-
-message(STATUS "GTSAM_DIR: $GTSAM_DIR")
-message(STATUS "LD_LIBRARY_PATH: $LD_LIBRARY_PATH")
 
 # Process subdirectories:
 option(MOLA_ENABLE_UNIT_TESTS "Build unit tests" ON)
