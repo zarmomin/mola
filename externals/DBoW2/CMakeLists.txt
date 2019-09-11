@@ -42,11 +42,7 @@ mola_add_library(
 	  ${OpenCV_LIBS}
 )
 
-target_include_directories(${PROJECT_NAME}
-  PUBLIC
-  $<BUILD_INTERFACE:${${PROJECT_NAME}_SOURCE_DIR}/DBoW2/include/>
-  $<INSTALL_INTERFACE:include>
-)
+target_include_directories(${PROJECT_NAME} PUBLIC DBoW2/include)
 
 set_target_properties(${PROJECT_NAME}
   PROPERTIES
