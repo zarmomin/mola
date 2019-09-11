@@ -43,7 +43,7 @@ find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_library(${PROJECT_NAME} SHARED ${SRCS})
-include_directories(DBoW2/include)
+target_include_directories(${PROJECT_NAME} PUBLIC DBoW2/include)
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
 
 configure_file(DBoW2/src/DBoW2.cmake.in
