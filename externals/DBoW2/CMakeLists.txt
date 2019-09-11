@@ -32,25 +32,28 @@ set(SRCS
   DBoW2/src/ScoringObject.cpp
 )
 
+message("project binary dir ${PROJECT_BINARY_DIR}")
+message("cmake binary dir ${CMAKE_BINARY_DIR}")
+message("cmake current binary dir ${CMAKE_CURRENT_BINARY_DIR}")
+
+set(DBOW_DEPENDENCY_DIR ${CMAKE_CURRENT_BINARY_DIR}/dependencies)
+set(DBOW_DEPENDENCY_INSTALL_DIR ${DBOW_DEPENDENCY_DIR}/install)
+
 find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
 
+add_library(${PROJECT_NAME} SHARED ${SRCS})
+include_directories(DBoW2/include)
+target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
 
-mola_add_library(
-	TARGET ${PROJECT_NAME}
-	SOURCES ${SRCS}
-	PUBLIC_LINK_LIBRARIES
-	  ${OpenCV_LIBS}
-)
+configure_file(DBoW2/src/DBoW2.cmake.in
+  "${PROJECT_BINARY_DIR}/DBoW2Config.cmake" @ONLY)
+install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 
-target_include_directories(${PROJECT_NAME}
-  PUBLIC
-  $<BUILD_INTERFACE:${${PROJECT_NAME}_SOURCE_DIR}/DBoW2/include/>
-  $<INSTALL_INTERFACE:include>
-)
+install(DIRECTORY DBoW2/include/DBoW2 DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
 
-set_target_properties(${PROJECT_NAME}
-  PROPERTIES
-  FOLDER "ExternalProjectTargets"
-)
-
-#TODO: export cmake target
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/DBoW2Config.cmake"
+  DESTINATION ${CMAKE_INSTALL_PREFIX}/include/${PROJECT_NAME})
+install(FILES "${PROJECT_BINARY_DIR}/DBoW2Config.cmake"
+  DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/cmake/DBoW2/)
+install(DIRECTORY ${DBOW_DEPENDENCY_INSTALL_DIR}/ DESTINATION ${CMAKE_INSTALL_PREFIX} OPTIONAL)
